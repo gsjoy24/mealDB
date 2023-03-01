@@ -1,8 +1,8 @@
-const loadMeals = () => {
-	const searchText = document.getElementById('search-field').value;
-	fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`)
+const loadMeals = (text) => {
+	fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${text}`)
 		.then((res) => res.json())
 		.then((data) => showMeals(data.meals));
+	console.log(text);
 };
 
 const showMeals = (meals) => {
@@ -23,6 +23,11 @@ const showMeals = (meals) => {
             </div>
          </div>
       `;
-		console.log(meal);
+		// console.log(meal);
 	});
 };
+const searchText = () => {
+	const text = document.getElementById('search-field').value;
+	loadMeals(text);
+};
+loadMeals('fish');
