@@ -16,9 +16,9 @@ const showMeals = (meals) => {
                <img src="${strMealThumb}" class="card-img-top" alt="..." />
                <div class="card-body">
                   <h5 class="card-title">${strMeal}</h5>
-                  <p class="card-text">Category: ${strCategory}</p>
-                  <p class="card-text">${strCategory}</p>
-                  <p class="card-text">Tags: ${strTags}</p>
+                  <p class="card-text">Category: ${strCategory ? strCategory : 'NO CATEGORY'}</p>
+                  <p class="card-text">${strCategory ? strCategory : 'NO CATEGORY'}</p>
+                  <p class="card-text">Tags: ${strTags ? strTags : 'No tags available'}</p>
                </div>
             </div>
          </div>
